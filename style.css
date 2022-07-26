@@ -102,3 +102,34 @@
     font-weight: bold;
     font-size: 40px;
 }
+.aboutme .atas{
+    text-align: center;
+    margin-top: 100px;
+}
+.aboutme .atas .text{
+    font-size: 50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+.aboutme .atas .text:before,
+.aboutme .atas .text:after{
+    content: "";
+    display: inline-block;
+    border-top: 1px solid;
+    width: 3em;
+    vertical-align: middle;
+    margin: 0 0.5em;
+}
+.aboutme .bawah .textsmall{
+    font-size: 25px;
+    color: black;
+    display: flex;
+    font-weight: 300;
+    text-decoration: none;
+    margin: 20px;
+    text-align: justify;
+}
