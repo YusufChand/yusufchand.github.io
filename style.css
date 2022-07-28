@@ -1,135 +1,95 @@
 *{
     padding: 0;
     margin: 0;
-}
-.parent{
-    background-color: black;
-    width: 100vw;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-.parent .kiri{
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-}
-.parent .kiri .links{
-    display: flex;
-    height: 100%;
-    align-items: center;
+    box-sizing: border-box;
+    list-style: none;
 }
 
-.parent .kiri .links button{
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgb(2, 1, 40);
+    font-size: 1.1rem;
     color: white;
-    background-color: black;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0px 10px;
-    transition: .5s;
+    transition: all .5s ease-in-out;
 }
-.parent .kiri .links button:hover{
-    background-color: rgb(110, 108, 108);
-    transition: .5s;
-}
-.parent .kanan{
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-}
-.parent .kanan .links{
-    display: flex;
-    column-gap: 20px;
-    margin-right: 0px;
-}
-
-.parent .kanan .links a{
-    color:white;
-    text-decoration: none;
-    font-size: small;
-    font-weight: 500;
-}
-
-.parent .kanan .links .button{
-    transition: .5s;
-    padding: 14px 20px;
-}
-
-.parent .kanan .links .button:hover{
-    transition: 0.5s;
-    background-color: rgb(110, 108, 108);
-}
-
-.homeprofile{
-    width: 100vw;
-    height: 410px;
-    display: flex;
-}
-.homeprofile .atas{
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-}
-.homeprofile .atas img{
-    height: 300px;
-    margin-left: 50px;
-    margin-top: 100px;
-    background-color: black;
-    padding: 10px;
-    border-radius: 20px;
-}
-.homeprofile .atas .text{
-    color: black;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 75px;
-}
-.homeprofile .bawah{
-    display: flex;
-    margin-top: 150px;
-    margin-left: -730px;
-}
-.homeprofile .bawah .textsmall{
-    color: black;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 40px;
-}
-.aboutme .atas{
-    text-align: center;
-    margin-top: 100px;
-}
-.aboutme .atas .text{
-    font-size: 50px;
-    color: black;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-}
-.aboutme .atas .text:before,
-.aboutme .atas .text:after{
-    content: "";
+a{
     display: inline-block;
-    border-top: 1px solid;
-    width: 3em;
-    vertical-align: middle;
-    margin: 0 0.5em;
-}
-.aboutme .bawah .textsmall{
-    font-size: 25px;
-    color: black;
-    display: flex;
-    font-weight: 300;
     text-decoration: none;
-    margin: 20px;
-    text-align: justify;
+    color: inherit;
+    font-family: inherit;
+}
+
+header{
+    height: 100vw;
+    color: white;
+    overflow: hidden;
+}
+section{
+    min-height: 100vw;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+}
+
+.section{
+    transform: translateY(-100%) scale(0);
+    transition: all .5s ease-in-out;
+    background-color: rgb(2, 1, 40);
+}
+
+.sec1{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec2{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec3{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec4{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec5{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.controls{
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+.active-btn{
+    background-color: greenyellow;
+    transition: all .5s ease-in-out;
+}
+.control{
+    padding: 1rem;
+    cursor: pointer;
+    background-color: grey;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7rem 0;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.417);
+}
+i{
+    font-size: 1.2rem;
+    color: white;
+    pointer-events: none;
 }
