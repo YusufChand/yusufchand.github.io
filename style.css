@@ -36,28 +36,46 @@ section{
 .section{
     transform: translateY(-100%) scale(0);
     transition: all .5s ease-in-out;
-    background-color: rgb(2, 1, 40);
+    background-color: rgb(2, 2, 40);
 }
 
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(2, 2, 40);
 }
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(2, 2, 80);
 }
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(2, 2, 120);
 }
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(2, 2, 160);
 }
 .sec5{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(2, 2, 200);
+}
+
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scale (0);
+        }
+        100%{
+            transform: translateY(-100%) scale (0);
+        }
+    }
 }
 
 .controls{
@@ -71,7 +89,7 @@ section{
     justify-content: center;
     transform: translateY(-50%);
 }
-.active-btn{
+.control.active-btn{
     background-color: greenyellow;
     transition: all .5s ease-in-out;
 }
