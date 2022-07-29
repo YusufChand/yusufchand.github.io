@@ -20,12 +20,12 @@ a{
 }
 
 header{
-    height: 100vw;
+    height: 50vw;
     color: white;
     overflow: hidden;
 }
 section{
-    min-height: 100vw;
+    min-height: 50vw;
     width: 100%;
     position: absolute;
     left: 0;
@@ -67,8 +67,8 @@ section{
 
 .active{
     display: block;
-    animation: scaleAnim 1s ease-in-out;
-    @keyframes scaleAnim {
+    animation: slidein 1s ease-in-out;
+    @keyframes slidein {
         0%{
             transform: translateY(-100%) scale (0);
         }
@@ -110,4 +110,109 @@ i{
     font-size: 1.2rem;
     color: white;
     pointer-events: none;
+}
+
+/* header */
+.header-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+}
+.header-content .left-header{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header-content .left-header .h-shape{
+    transition: all .5s ease-in-out;
+    width: 65%;
+    height: 100%;
+    background-color: greenyellow;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(0 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.header-content .left-header .h-image{
+    width: 65%;
+    height: 90%;
+    padding-left: 5px;
+    border-radius: 50px;
+    margin-left: 4rem;
+    background-color: rgb(2, 2, 40);
+    transition: all .5s ease-in-out;
+}
+.header-content .left-header .h-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+    transition: all .5s ease-in-out;
+    filter: grayscale(100%);
+}
+.header-content .left-header .h-image img:hover{
+    filter: grayscale(0);
+}
+
+
+.header-content .right-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 18rem;
+}
+.header-content .right-header .name{
+    font-size: 3rem;
+}
+.header-content .right-header .name span{
+    color: greenyellow;
+}
+.header-content .right-header p{
+    margin: 1.5rem 0;
+    line-height: 2 rem;
+}
+
+/*Button at home*/
+.btn-con{
+    display: flex;
+    align-self: flex-start;
+}
+.main-btn{
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid greenyellow;
+    display: flex;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.btn-text{
+    padding: 0 2rem;
+}
+.btn-icon{
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+}
+.main-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all .5s ease-out;
+    z-index: -1;
+}
+.main-btn:hover::before{
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    transform: translateX(0);
 }
