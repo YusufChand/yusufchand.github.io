@@ -42,27 +42,22 @@ section{
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(2, 2, 40);
 }
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(2, 2, 80);
 }
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(2, 2, 120);
 }
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(2, 2, 160);
 }
 .sec5{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(2, 2, 200);
 }
 
 .active{
@@ -168,6 +163,9 @@ i{
 .header-content .right-header .name span{
     color: greenyellow;
 }
+.header-content .right-header .job{
+    font-size: 2rem;
+}
 .header-content .right-header p{
     margin: 1.5rem 0;
     line-height: 2 rem;
@@ -215,4 +213,214 @@ i{
     height: 100%;
     background-color: greenyellow;
     transform: translateX(0);
+}
+
+/*page 2 about me*/
+.main-title{
+    text-align: center;
+}
+.main-title h3{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.main-title h3 span{
+    color: greenyellow;
+}
+.main-title h3 .bg-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgba(144, 144, 144, 0.429);
+    transition: all .5s ease-in-out;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 6.3rem;
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3.5rem;
+    padding-top: 5rem;
+}
+.about-container .right-about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+.about-container .right-about .about-item{
+    border: 1px solid rgba(144, 144, 144, 0.429);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.about-container .right-about .about-item:hover{
+    cursor: default;
+    transform: translateY(-5px);
+    border: 1px solid greenyellow;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
+}
+.about-container .right-about .about-item .abt-text{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.about-container .right-about .about-item .abt-text .large-text{
+    font-size: 3rem;
+    font-weight: 700;
+    color: greenyellow;
+}
+.about-container .right-about .about-item .abt-text .small-text{
+    padding-left: 3rem;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: grey;
+    letter-spacing: 2px; 
+}
+.about-container .right-about .about-item .abt-text .small-text::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 2rem;
+    height: 2px;
+    background-color: rgba(144, 144, 144, 0.429);
+}
+
+.about-container .left-about{
+    padding-right: 5rem;
+}
+.about-container .left-about p{
+    line-height: 2rem;
+    padding: 1rem;
+}
+.about-container .left-about h4{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.about-stats{
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+.stat-title{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 3.5rem 0;
+    position: relative;
+}
+.stat-title::before{
+    content: '';
+    left: 50%;
+    top: 0;
+    width: 40%;
+    height: 1px;
+    background-color: grey;
+    transform: translateX(-50%);
+}
+.progress-bars{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem; 
+}
+.progress-bar{
+    display: flex;
+    flex-direction: column;
+}
+.prog-title{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.progress-con{
+    display: flex;
+    align-items: center;
+}
+.prog-text{
+    color:grey;
+}
+.progress{
+    width: 100%;
+    height: .45rem;
+    background-color: grey;
+    margin-left: 1rem;
+    position: relative;
+}
+.progress span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: greenyellow;
+    transition: all .5s ease-in-out;
+}
+.progress .design{
+    width: 80%;
+}
+.progress .teamwork{
+    width: 90%;
+}
+.progress .leadership{
+    width: 85%;
+}
+.progress .sketchup{
+    width: 80%;
+}
+.progress .problem-solving{
+    width: 75%;
+}
+
+/*timeline*/
+.timeline{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding-bottom: 3rem;
+}
+.timeline-item{
+    position: relative;
+    padding-left: .3rem;
+    border-left: 1px solid grey;
+}
+.tl-icon{
+   position: absolute;
+   left: -80px;
+   top: 0;
+   background-color: greenyellow;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+.tl-icon i{
+    font-size: 1.3rem;
+}
+.tl-duration{
+    padding: .2rem .6rem;
+    background-color: rgba(144, 144, 144, 0.429);
+    border-radius: 15px;
+    display: inline-block;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.timeline-item h5{
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.timeline-item h5 span{
+    color: rgb(200, 200, 200);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.timeline-item p{
+   color: rgb(200, 200, 200); 
 }
