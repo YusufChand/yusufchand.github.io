@@ -5,11 +5,34 @@
     list-style: none;
 }
 
+:root{
+    --color-primary: rgb(2, 1, 40);
+    --color-secondary: greenyellow;
+    --color-white: white;
+    --color-grey: grey;
+    --color-grey2: rgba(144, 144, 144, 0.429);
+    --color-grey3: rgb(200, 200, 200);
+    --box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+    --box-color: rgb(2, 1, 40);
+    --color-greyopa: rgba(128, 128, 128, 0.3);
+}
+.light-mode{
+    --color-primary: white;
+    --color-secondary: rgb(54, 54, 248);
+    --color-white: black;
+    --color-grey: grey;
+    --color-grey2: rgb(39, 39, 39);
+    --color-grey3: rgb(180, 180, 180);
+    --box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+    --box-color: rgb(2, 1, 40);
+    --color-greyopa: rgba(128, 128, 128, 0.3);
+}
+
 body{
     font-family: 'Roboto Condensed', sans-serif;
-    background-color: rgb(2, 1, 40);
+    background-color: var(--color-primary);
     font-size: 1.1rem;
-    color: white;
+    color: var(--color-white);
     transition: all .5s ease-in-out;
 }
 a{
@@ -21,7 +44,7 @@ a{
 
 header{
     height: 50vw;
-    color: white;
+    color: var(--color-white);
     overflow: hidden;
 }
 section{
@@ -36,7 +59,7 @@ section{
 .section{
     transform: translateY(-100%) scale(0);
     transition: all .5s ease-in-out;
-    background-color: rgb(2, 2, 40);
+    background-color: var(--color-primary);
 }
 
 .sec1{
@@ -85,13 +108,13 @@ section{
     transform: translateY(-50%);
 }
 .control.active-btn{
-    background-color: greenyellow;
+    background-color: var(--color-secondary);
     transition: all .5s ease-in-out;
 }
 .control{
     padding: 1rem;
     cursor: pointer;
-    background-color: grey;
+    background-color: var(--color-grey);
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -99,11 +122,34 @@ section{
     justify-content: center;
     align-items: center;
     margin: .7rem 0;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.417);
+    box-shadow: var(--box-shadow);
 }
 i{
     font-size: 1.2rem;
-    color: white;
+    color: var(--color-white);
+    pointer-events: none;
+}
+
+.theme-btn{
+    top: 5%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-grey);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    transition: all .1s ease-in-out;
+}
+.theme-btn:active{
+    transform: translateY(-3px);
+}
+.theme-btn i{
+    font-size: 1.4rem;
     pointer-events: none;
 }
 
@@ -122,7 +168,7 @@ i{
     transition: all .5s ease-in-out;
     width: 65%;
     height: 100%;
-    background-color: greenyellow;
+    background-color: var(--color-secondary);
     position: absolute;
     left: 0;
     top: 0;
@@ -135,7 +181,7 @@ i{
     padding-left: 5px;
     border-radius: 50px;
     margin-left: 4rem;
-    background-color: rgb(2, 2, 40);
+    background-color: var(--box-color);
     transition: all .5s ease-in-out;
 }
 .header-content .left-header .h-image img{
@@ -161,14 +207,14 @@ i{
     font-size: 3rem;
 }
 .header-content .right-header .name span{
-    color: greenyellow;
+    color: var(--color-secondary);
 }
 .header-content .right-header .job{
     font-size: 2rem;
 }
 .header-content .right-header p{
     margin: 1.5rem 0;
-    line-height: 2 rem;
+    line-height: 2rem;
 }
 
 /*Button at home*/
@@ -181,7 +227,7 @@ i{
     color: inherit;
     font-weight: 600;
     position: relative;
-    border: 1px solid greenyellow;
+    border: 1px solid var(--color-secondary);
     display: flex;
     align-self: flex-start;
     display: flex;
@@ -192,7 +238,7 @@ i{
     padding: 0 2rem;
 }
 .btn-icon{
-    background-color: greenyellow;
+    background-color: var(--color-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,7 +257,7 @@ i{
 .main-btn:hover::before{
     width: 100%;
     height: 100%;
-    background-color: greenyellow;
+    background-color: var(--color-secondary);
     transform: translateX(0);
 }
 
@@ -226,13 +272,13 @@ i{
     font-weight: 700;
 }
 .main-title h3 span{
-    color: greenyellow;
+    color: var(--color-secondary);
 }
 .main-title h3 .bg-text{
     position: absolute;
     top: 50%;
     left: 50%;
-    color: rgba(144, 144, 144, 0.429);
+    color: var(--color-greyopa);
     transition: all .5s ease-in-out;
     z-index: -1;
     transform: translate(-50%, -50%);
@@ -252,7 +298,7 @@ i{
     grid-gap: 2rem;
 }
 .about-container .right-about .about-item{
-    border: 1px solid rgba(144, 144, 144, 0.429);
+    border: 1px solid var(--color-grey2);
     border-radius: 5px;
     transition: all .5s ease-in-out;
     box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
@@ -260,7 +306,7 @@ i{
 .about-container .right-about .about-item:hover{
     cursor: default;
     transform: translateY(-5px);
-    border: 1px solid greenyellow;
+    border: 1px solid var(--color-secondary);
     box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
 }
 .about-container .right-about .about-item .abt-text{
@@ -271,14 +317,14 @@ i{
 .about-container .right-about .about-item .abt-text .large-text{
     font-size: 3rem;
     font-weight: 700;
-    color: greenyellow;
+    color: var(--color-secondary);
 }
 .about-container .right-about .about-item .abt-text .small-text{
     padding-left: 3rem;
     position: relative;
     text-transform: uppercase;
     font-size: 1.2rem;
-    color: grey;
+    color: var(--color-grey);
     letter-spacing: 2px; 
 }
 .about-container .right-about .about-item .abt-text .small-text::before{
@@ -288,7 +334,7 @@ i{
     top: 15px;
     width: 2rem;
     height: 2px;
-    background-color: rgba(144, 144, 144, 0.429);
+    background-color: var(--color-grey2);
 }
 
 .about-container .left-about{
@@ -321,7 +367,7 @@ i{
     top: 0;
     width: 40%;
     height: 1px;
-    background-color: grey;
+    background-color: var(--color-grey);
     transform: translateX(-50%);
 }
 .progress-bars{
@@ -342,12 +388,12 @@ i{
     align-items: center;
 }
 .prog-text{
-    color:grey;
+    color: var(--color-grey);
 }
 .progress{
     width: 100%;
     height: .45rem;
-    background-color: grey;
+    background-color: var(--color-grey);
     margin-left: 1rem;
     position: relative;
 }
@@ -356,7 +402,7 @@ i{
     top: 0;
     left: 0;
     height: 100%;
-    background-color: greenyellow;
+    background-color: var(--color-secondary);
     transition: all .5s ease-in-out;
 }
 .progress .design{
@@ -385,13 +431,13 @@ i{
 .timeline-item{
     position: relative;
     padding-left: .3rem;
-    border-left: 1px solid grey;
+    border-left: 1px solid var(--color-grey);
 }
 .tl-icon{
    position: absolute;
    left: -80px;
    top: 0;
-   background-color: greenyellow;
+   background-color: var(--color-secondary);
    width: 50px;
    height: 50px;
    border-radius: 50%;
@@ -404,7 +450,7 @@ i{
 }
 .tl-duration{
     padding: .2rem .6rem;
-    background-color: rgba(144, 144, 144, 0.429);
+    background-color: var(--color-grey2);
     border-radius: 15px;
     display: inline-block;
     font-size: .8rem;
@@ -418,12 +464,12 @@ i{
     font-weight: 600;
 }
 .timeline-item h5 span{
-    color: rgb(200, 200, 200);
+    color: var(--color-grey3);
     font-weight: 500;
     font-size: 1.2rem;
 }
 .timeline-item p{
-   color: rgb(200, 200, 200); 
+   color: var(--color-grey3); 
 }
 
 /* Page 3 Portfolio */
@@ -450,7 +496,7 @@ i{
 .portfolios .portfolio-item .hover-items{
     width: 100%;
     height: 100%;
-    background-color: greenyellow;
+    background-color: var(--color-secondary);
     position: absolute;
     left: 0;
     top: 0;
@@ -469,7 +515,7 @@ i{
 }
 .portfolios .portfolio-item .hover-items h4{
     font-size: 1.5rem;
-    color: white;
+    color: var(--color-white);
     margin-bottom: 1.5rem;
 }
 .portfolios .portfolio-item .hover-items .icons{
@@ -478,7 +524,7 @@ i{
     align-items: center;
 }
 .portfolios .portfolio-item .hover-items .icons .icon{
-    background-color: rgb(2, 2, 40);
+    background-color: var(--color-primary);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -491,11 +537,11 @@ i{
 }
 .portfolios .portfolio-item .hover-items .icons .icon i{
     font-size: 1.5rem;
-    color: white;
+    color: var(--color-white);
     margin: 0 1rem;
 }
 .portfolios .portfolio-item .hover-items .icons .icon:hover{
-    background-color: grey;
+    background-color: var(--color-grey);
 }
 
 /* Page 4 Works */
@@ -507,7 +553,7 @@ i{
 }
 .works .work{
     position: relative;
-    background-color: rgb(98, 97, 97);
+    background-color: var(--color-grey2);
     border-radius: 5px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.105);
     transition: all .5s ease-in-out;
@@ -534,22 +580,23 @@ i{
 .works .work .work-text{
     margin-top: -7px;
     padding: 1.1rem;
-    border-top: 8px solid greenyellow;
+    border-top: 8px solid var(--color-secondary);
 }
 .works .work .work-text h4{
     font-size: 1.5rem;
     margin-bottom: .7rem;
     transition: all .5s ease-in-out;
     cursor: pointer;
+    color: white;
 }
 .works .work .work-text p{
-    color: rgb(200, 200, 200);
+    color: var(--color-grey3);
     line-height: 2rem;
     padding-bottom: 1rem;
     text-justify: inherit;
 }
 .works .work .work-text h4:hover{
-    color: greenyellow;
+    color: var(--color-secondary);
 }
 
 /* page 5 contact */
@@ -594,8 +641,8 @@ i{
 .contact-content-con .left-contact .contact-icons .contact-icon a{
     display: flex;
     align-items: center;
-    color: white;
-    background-color: grey;
+    color: var(--color-white);
+    background-color: var(--color-grey);
     cursor: pointer;
     justify-content: center;
     width: 50px;
@@ -605,10 +652,10 @@ i{
     transition: all .5s ease-in-out;
 }
 .contact-content-con .left-contact .contact-icons .contact-icon a:hover{
-    background-color: greenyellow;
+    background-color: var(--color-secondary);
 }
 .contact-content-con .left-contact .contact-icons .contact-icon a:hover i{
-    color: rgb(2, 1, 40);
+    color: var(--color-primary);
     transition: all .5s ease-in-out;
 }
 .contact-content-con .left-contact .contact-icons .contact-icon a i{
@@ -632,10 +679,10 @@ i{
     font-size: inherit;
     font-family: inherit;
     padding: .8rem 1.1rem;
-    border: 1px solid rgba(172, 255, 47, 0.6);
-    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-greyopa);
     width: 100%;
-    color: white;
+    color: var(--color-white);
     resize: none;
 }
 .contact-content-con .right-contact .i-c-2{
